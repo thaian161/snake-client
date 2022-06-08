@@ -20,6 +20,11 @@ const connect = function () {
     console.log(data);
   });
 
+  //Sending a name to server
+  conn.on('connect', () => {
+    conn.write('Name: ANN'); //send a string "Name: ANN"
+  });
+
   return conn;
 };
 
