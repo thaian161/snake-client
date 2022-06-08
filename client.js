@@ -23,14 +23,16 @@ const connect = function () {
   //Sending a name to server
   conn.on('connect', () => {
     conn.write('Name: ANN'); //send a string "Name: ANN"
+    conn.write('Say: (^o^)');
   });
 
-  //Testing make the snake auto move up using setInterval
-  setInterval(() => {
-    conn.write('Move: up');
-  }, 50);
+  // //Testing make the snake auto move up using setInterval
+  // setInterval(() => {
+  //   conn.write('Move: up');
+  // }, 50);
 
   return conn;
 };
 
 module.exports = { connect };
+const { IP, PORT } = require('./constant');
