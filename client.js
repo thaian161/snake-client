@@ -25,6 +25,11 @@ const connect = function () {
     conn.write('Name: ANN'); //send a string "Name: ANN"
   });
 
+  //Testing make the snake auto move up using setInterval
+  setInterval(() => {
+    conn.write('Move: up');
+  }, 50);
+
   return conn;
 };
 
